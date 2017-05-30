@@ -8,9 +8,9 @@ This class explores how computation impacts the entire workflow of photography, 
 
 ## Seam Carving 
 
-My first experiment with a technique that looks like magic. Content-Aware Image Resizing technique was invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. https://www.youtube.com/watch?v=qadw0BRKeMk
+My first experiment with a technique that looks like magic. Content-Aware Image Resizing technique was invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
 
-I used python's openCV and scikit image to build a few seam carving algroithms. The first, seam_carving_slider.py, is a tool that allows the user to upload an image and use a trackbar to compress the image as desired. My second algorthim, seam_carving_iter.py is a loop implementation that allows the user to input a percent of the original image to compress into, and save consecutive images as one seam is removed per iteration. Though slower, the advantage here is that the algorithm recursively recalculates the energy maps and seams to allow significantly cleaner resizing. 
+My implementation: https://www.youtube.com/watch?v=gIVqbKQdSGs
 
-In both algorithms I wrote my own energy map function that uses a Sobel magnitude gradient paired with minimal smoothing and resizing. The openCV implementation runs much quicker that the scikit image tutorials that are out there. 
+I used python's openCV and scikit image to build a few seam carving algroithms. The first, seam_carving_slider.py, is a tool that allows the user to upload an image and use a trackbar to compress the image as desired. My second algorthim, seam_carving_iter.py is a loop implementation that allows the user to input a percent of the original image to compress into, and save consecutive images as one seam is removed per iteration. My algorithm takes in inputs for direction,  compression ratio and number of seams per iteration. Hardcoded is the energy mapping function, which does Gaussian smoothing and measures the Sobel gradient magnitude in openCV, much faster than scikit. In the loop I recursively carve (scikit) and recompute the energy map which makes the seam cutting more seamless. 
 
