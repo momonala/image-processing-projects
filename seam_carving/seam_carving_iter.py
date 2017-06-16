@@ -6,10 +6,10 @@ direction = 'vertical' #vertical/horizontal
 seams_per_iter = 1 #number of pixels to remove each iteration (lower is cleaner)
 final_size = 0.5 #fraction of original image dimension to compress original into 
 
-img = cv2.imread('lake.jpg')
+img = cv2.imread('castle.jpg')
 
 reso = img.shape #resize for speed 
-reso = [int(x*.1) for x in reso] #reduce size by some fraction 
+reso = [int(x*1) for x in reso] #reduce size by some fraction 
 img = cv2.resize(img, (reso[1], reso[0]))
 
 #set scale factor 
@@ -37,7 +37,7 @@ cv2.imshow('original', energy_map)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-for num_seams in range(seams_per_iter, scale, seams_per_iter):
+for i, num_seams in enumerate(range(seams_per_iter, scale, seams_per_iter)):
 	carve = transform.seam_carve(img, energy_map, direction, seams_per_iter)
 	img = (carve*255).astype(np.uint8) #recursively recalculate images, save time, cleaner cuts 
 	energy_map = create_energy_map(img)
@@ -48,7 +48,8 @@ for num_seams in range(seams_per_iter, scale, seams_per_iter):
 	carve=cv2.copyMakeBorder(carve, top=0, bottom=0, left=0, right=num_seams, borderType= cv2.BORDER_CONSTANT, value=[0,0,0])
 	
 	title = 'carved'+str(num_seams) + '.jpg'
-	cv2.imwrite(title, (carve*255).astype(np.uint8)) #multiple to convert 0-1 to 0-255
+	if i % 30 == 0:
+		cv2.imwrite(title, (carve*255).astype(np.uint8)) #multiple to convert 0-1 to 0-255
 	#cv2.imshow(title, carve) #for visualization 
 	#cv2.waitKey(0)
 print 'finished!'
