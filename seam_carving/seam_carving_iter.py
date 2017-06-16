@@ -48,8 +48,8 @@ for i, num_seams in enumerate(range(seams_per_iter, scale, seams_per_iter)):
 	carve=cv2.copyMakeBorder(carve, top=0, bottom=0, left=0, right=num_seams, borderType= cv2.BORDER_CONSTANT, value=[0,0,0])
 	
 	title = 'carved'+str(num_seams) + '.jpg'
-	if i % 30 == 0:
-		cv2.imwrite(title, (carve*255).astype(np.uint8)) #multiple to convert 0-1 to 0-255
+
+	cv2.imwrite(title, (carve*255).astype(np.uint8)) #multiple to convert 0-1 to 0-255
 	#cv2.imshow(title, carve) #for visualization 
 	#cv2.waitKey(0)
 print 'finished!'
