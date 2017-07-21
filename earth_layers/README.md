@@ -12,4 +12,5 @@ https://visibleearth.nasa.gov/
 
 2) Use earth_layers.py to overlay the set of images you want to compare features against. Both python files use sliders to control the image processing. 
 
-![schematic](/earth_layers2.jpg)
+<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/earth_layers/earth_layers2.jpg" width="480" alt="Combined Image" />
+
