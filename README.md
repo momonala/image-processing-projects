@@ -2,7 +2,7 @@
 
 Experiments and algorithms in image processing, computer vision, and computational photography! Projects inspired by personal curiosity, classes, and the [Udacity computational photography course](https://www.udacity.com/course/computational-photography--ud955) offered at Georgia Tech as CS 6475. 
 
-## [Seam Carving] (https://github.com/momonala/imaging_and_vision/tree/master/seam_carving)
+## [Seam Carving](https://github.com/momonala/imaging_and_vision/tree/master/seam_carving)
 
 My first experiment with a technique that looks like magic. Content-Aware Image Resizing technique was invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
 
@@ -10,11 +10,11 @@ My implementation: https://www.youtube.com/watch?v=gIVqbKQdSGs
 
 I used python's openCV and scikit image to build a few seam carving algroithms. The first, seam_carving_slider.py, is a tool that allows the user to upload an image and use a trackbar to compress the image as desired. My second algorthim, seam_carving_iter.py is a loop implementation that allows the user to input a percent of the original image to compress into, and save consecutive images as one seam is removed per iteration. My algorithm takes in inputs for direction,  compression ratio and number of seams per iteration. Hardcoded is the energy mapping function, which does Gaussian smoothing and measures the Sobel gradient magnitude in openCV, much faster than scikit. In the loop I recursively carve (scikit) and recompute the energy map which makes the seam cutting more seamless. 
 
-## [Image Layering with Open Source NASA Map Images] (https://github.com/momonala/Earth-Layers)
+## [Image Layering with Open Source NASA Map Images](https://github.com/momonala/Earth-Layers)
 
 The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data. You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how various features interact.
 
-<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/earth_layers/earth_layers2.jpg" width="480" alt="Combined Image" />
+<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/earth_layers/earth_layers2.jpg" width="920" alt="Combined Image" />
 
 ## Cell Counting with Hough Circles 
 
