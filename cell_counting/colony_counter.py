@@ -102,9 +102,8 @@ def pipeline(img_file):
 	img = cv2.medianBlur(img, 9) #denoise
 	img = 255-img	#invert
 	img = crop_sides_clean(img)
-	 
+	
 	img = cv2.resize(img, (img.shape[1]*2,img.shape[0]*2)) #increase size helps counting 
-	color_img = cv2.resize(color_img, (color_img.shape[1]*2,color_img.shape[0]*2))
 	
 	circles = cv2.HoughCircles(img, 
 								cv2.HOUGH_GRADIENT, #detection method
@@ -117,7 +116,6 @@ def pipeline(img_file):
 	
 	#revert size back to normal 
 	img = cv2.resize(img, (img.shape[1]/2,img.shape[0]/2))
-	color_img = cv2.resize(color_img, (color_img.shape[1]/2,color_img.shape[0]/2))
 	thresh_img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
 
 	if circles is None: 
@@ -175,7 +173,7 @@ def pipeline(img_file):
 				#cv2.putText(color_img,well_label, (well_x, well_y), font, 2, (0,255,0), 2)
 				
 				well_num += 1
-		show_img(color_img)
+				
 		wells = wells[0:] #get rid of first row from init 
 		circles = np.hstack((circles, np.zeros((cell_counts, 1)))).astype(int) #add plate# to cells array 
 
@@ -272,7 +270,7 @@ def pipeline(img_file):
 		
 		print "total cells found: ", circles.shape[0]
 		print 'pickable cells found: ', logs.shape[0]
-		show_img(raw_img)
+		
 	return thresh_img, color_img
 
 ### APPLY PIPELINE ### 
@@ -280,7 +278,7 @@ def pipeline(img_file):
 #img_file = 'ecoli.tif'
 #thresh_img, color_img = pipeline(img_file)
 
-dir = 'validation/' 
+dir = 'plates/' 
 for filename in os.listdir(dir):	
 	if '.tif' in filename or '.TIF' in filename:
 		thresh_img, color_img = pipeline(dir+filename)

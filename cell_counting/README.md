@@ -7,7 +7,7 @@ This is a python application which takes in an image of a Agar 96 well plate and
 The required setup is a stationary camera and fixed position for the well plate. The algorithm works by subtracting a blank image of the well plate with no cells from the new image in question. This will leave the remaining cells to be counted clearly, albiet with very low contrast. A series of image processing algorithms are applied to boost the features and count the cells via Hough Circles. 
 
 ### original agar plate
-<img src='https://github.com/momonala/imaging_and_vision/blob/master/cell_counting/images/d10_1-8.tif' height="500" >
+<img src='' height="500" >
 
 ### after thresholding 
 <img src='' height="500" >
