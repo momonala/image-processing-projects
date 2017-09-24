@@ -6,7 +6,7 @@ This is a python application which takes in an image of a Agar 96 well plate and
 
 The required setup is a stationary camera and fixed position for the well plate. The algorithm works by subtracting a blank image of the well plate with no cells from the new image in question. This will leave the remaining cells to be counted clearly, albiet with very low contrast. A series of image processing algorithms are applied to boost the features and count the cells via Hough Circles. 
 
-<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/cell_counting/img/disp.png" width="700" alt="raw" />
+<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/cell_counting/img/disp.png" width="1000" alt="raw" />
 
 
 The rest of the code and functions serves to pick the "best" colonies for picking by a robot. The criteria for the top ranked cells are the radius of the cell and its separation from other cells. The algorithm will find the top 3 cells in each well plate (determined by preset teach points -purple circles in image) for picking. The green cells above are the "good" cells, and the red ones are deemed non-pickable. It outputs the (x, y) coordinates, radius, and a few other features to a .DAT file for reading by the robot. 

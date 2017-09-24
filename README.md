@@ -8,7 +8,7 @@ Experiments and algorithms in image processing, computer vision, and computation
 
 I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish. This was for a project at work which involved a larger pipeline of cell counting and colony picking with a robot. My algorithm vastly improved the existing default technique. I included parameters to filter the desired radius size of the cell, the separation of cells within each plate (close-by cells can otherwise be incorrecly grouped as the same colony, even though they have genetic differences. This avoids that), and had an overall higher accuracy at finding cells. It was based on using Hough Circles as the shape finding algorithm, with a whole lot of numpy to itemize the well plates and cell ranking. 
 
-<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/cell_counting/img/disp.png" width="700" alt="raw" />
+<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/cell_counting/img/disp.png" width="1000" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
