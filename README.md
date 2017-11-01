@@ -4,25 +4,31 @@ Experiments and algorithms in image processing, computer vision, and computation
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Cell Counting with Hough Circles](https://github.com/momonala/imaging_and_vision/tree/master/cell_counting)
+## [Cell Counting with Hough Circles](/cell_counting)
 
 I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish. This was for a project at work which involved a larger pipeline of cell counting and colony picking with a robot. My algorithm vastly improved the existing default technique. I included parameters to filter the desired radius size of the cell, the separation of cells within each plate (close-by cells can otherwise be incorrecly grouped as the same colony, even though they have genetic differences. This avoids that), and had an overall higher accuracy at finding cells. It was based on using Hough Circles as the shape finding algorithm, with a whole lot of numpy to itemize the well plates and cell ranking. 
 
-<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/cell_counting/img/disp.png" width="1000" alt="raw" />
+<img src="/cell_counting/img/disp.png" width="1000" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Image Layering with Open Source NASA Map Images](https://github.com/momonala/imaging_and_vision/tree/master/earth_layers)
+## [Image Layering with Open Source NASA Map Images](/earth_layers)
 
 The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data from NASA's image repo, [Visible Earth](https://www.visibleearth.nasa.gov/). You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how population and light interact.
 
-<img src="https://raw.githubusercontent.com/momonala/imaging_and_vision/master/earth_layers/earth_layers2.jpg" width="800" alt="Combined Image" />
+<img src="/earth_layers/earth_layers2.jpg" width="800" alt="Combined Image" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Keras Prototype](https://github.com/momonala/imaging_and_vision/tree/master/keras_prototype)
+## [Keras Prototype](/keras_prototype)
 
 Built a keras prototype for Keras to copy, paste, and modify for other purposes. Includes CNN architecture, lambda layer preprocessing, optimizers, metrics, losses, visualizations, and tensorboard. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## [Image Generator for Machine Learning](/generator)
+
+This is an image generator I built from scratch for an interview with [BrighterAI](), an deep learning company that uses image augmentation for security and self-driving-cars. The generator has a basic version plus a version for GPU support and image augmentation. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
