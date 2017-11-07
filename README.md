@@ -12,12 +12,12 @@ I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Video Background Removal with Singular Value Decompostion](/singular_value_decomposition)
+## [Video Background Removal with Singular Value Decompostion](/background_removal)
 
 This notebook shows the use of Singular Value Decomposition for the purpose of background removal from a survelliance video stream. The project idea originally comes from Rachel Thomas' FastAI course for 
 [Computational Linear Algebra - Chapter 3](https://github.com/fastai/numerical-linear-algebra). The dataset comes from the [BMC 2012 Background Models Challenge Dataset](http://bmc.iut-auvergne.com/?page_id=24)
 
-<img src="/singular_value_decomposition/output.png" width="1000" alt="raw" />
+<img src="/background_removal/output.png" width="1000" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
