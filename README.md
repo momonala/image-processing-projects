@@ -1,6 +1,6 @@
-# Images! 
+# Making images! 
 
-Experiments and algorithms in image processing, computer vision, and computational photography! Projects inspired by personal curiosity, classes, and the Udacity's courses in [Ariticial Intelligence](https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889) and [Computational Photography](https://www.udacity.com/course/computational-photography--ud955) offered at Georgia Tech as CS 6475. 
+A place for my smaller projects & experiments in image processing, computer vision, and computational photography.  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,6 +9,14 @@ Experiments and algorithms in image processing, computer vision, and computation
 I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish. This was for a project at work which involved a larger pipeline of cell counting and colony picking with a robot. My algorithm vastly improved the existing default technique. I included parameters to filter the desired radius size of the cell, the separation of cells within each plate (close-by cells can otherwise be incorrecly grouped as the same colony, even though they have genetic differences. This avoids that), and had an overall higher accuracy at finding cells. It was based on using Hough Circles as the shape finding algorithm, with a whole lot of numpy to itemize the well plates and cell ranking. 
 
 <img src="/cell_counting/img/disp.png" width="1000" alt="raw" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## [Ascii Characters to Pixels](/ascii_mosaic)
+
+This code is inspired from the [BitsOfCode](https://bitesofcode.wordpress.com/2017/01/19/converting-images-to-ascii-art-part-1/) blog post on converting pixel values of an image to ascii characters. I built a similar processor using my own technique in Python. I also went one step further and created a method to convert specifc text, in my case a speech transcript, to create map pixel intensities to specific text. The results are quite cool! 
+
+<img src="ascii_mosaic/obama/obama_ascii.gif" width="600" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -31,7 +39,7 @@ The code works as a series of transformations and image overlays on Equirectangu
 
 ## [Keras Prototype](/keras_prototype)
 
-Built a keras prototype for Keras to copy, paste, and modify for other purposes. Includes CNN architecture, lambda layer preprocessing, optimizers, metrics, losses, visualizations, and tensorboard. 
+Built a keras prototype for Keras to copy, paste, and modify for other purposes. Includes CNN architecture, lambda layer preprocessing, optimizers, metrics, losses, visualizations, and tensorboard, mostly so I can copy and paste for later projects :)  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -43,7 +51,7 @@ This is an image generator I built from scratch for an interview with [BrighterA
 
 ## [Seam Carving](https://github.com/momonala/imaging_and_vision/tree/master/seam_carving)
 
-My first experiment with a technique that looks like magic. Content-Aware Image Resizing technique was invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
+An experiment with a technique that looks like magic. Content-Aware Image Resizing - a technique invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
 
 <a href="https://www.youtube.com/watch?v=gIVqbKQdSGs " target="_blank"><img src="/seam_carving/img.png"  alt="_" width="700" border="10" /></a>
 
