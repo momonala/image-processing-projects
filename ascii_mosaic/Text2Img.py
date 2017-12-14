@@ -4,11 +4,10 @@ from skimage.transform import resize
 from itertools import cycle
 import string 
 
-
-FONT = cv2.FONT_HERSHEY_SIMPLEX
+import matplotlib.pyplot as plt 
 
 class Processor: 
-    def __init__(self, size=size, text = 'files/transcript.txt', center_text=True): 
+    def __init__(self, size=15, text = 'files/transcript.txt', center_text=True): 
         '''Processor Constructor 
         args : 
             size : (int) size of sides of ascii .PNG (square)
@@ -29,7 +28,8 @@ class Processor:
                 transcipt = '{}{}'.format(transcipt, word)
                 for char in word:
                     char_img = np.zeros(shape=(40, 40))
-                    cv2.putText(char_img, char, (9, 25), FONT, 1, 1, 1)
+                    cv2.putText(char_img, char, (9, 25),
+                                cv2.FONT_HERSHEY_SIMPLEX, 1, 1, 1)
                     
                     if center_text:
                         if char != ' ' and char not in string.punctuation:
@@ -47,7 +47,9 @@ class Processor:
                                         (vert_mean-12):(vert_mean+12)]
 
                     char_img = resize(char_img, (self.size, self.size))
-                    char_img = 1- cv2.threshold(char_img,0,1,cv2.THRESH_BINARY)[1]
+                    char_img = 1 - cv2.threshold(char_img,0,1,cv2.THRESH_BINARY)[1]
+                    char_img *= 255
+#                     print (char_img)
 #                     plt.imshow(char_img); plt.show()
                     self.letter_lookup[char] = char_img
         self.transcipt = list(transcipt)
@@ -59,8 +61,14 @@ class Processor:
         '''project/map binned ASCII chars to stored .PNGs'''
         next_char = next(self.cycle_transript)
         char_img = self.letter_lookup[next_char]
-        background = char_img*pixel
-        out = cv2.addWeighted(char_img+255,0.5, background,0.5, 0)
+        
+        mask = (char_img==0)
+        template = char_img*0
+        out = template+255
+        color = template+pixel
+        out[mask]=color[mask]
+        
+        out = cv2.addWeighted(out, 0.8, color, 0.2, 1) 
         return out
         
     def process_image(self, input_image, shift = 0):

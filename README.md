@@ -29,6 +29,13 @@ This notebook shows the use of Singular Value Decomposition for the purpose of b
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+## [Math Gifs](/math_gifs)
+
+Because math is beautiful. 
+
+<img src="/math_gifs/toroid_revolver/toroid_compressed.gif" width="400" alt="raw" />
+
+
 ## [Image Layering with Open Source NASA Map Images](/earth_layers)
 
 The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data from NASA's image repo, [Visible Earth](https://www.visibleearth.nasa.gov/). You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how population and light interact.
