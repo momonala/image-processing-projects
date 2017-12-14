@@ -16,7 +16,7 @@ I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish.
 
 This code is inspired from the [BitsOfCode](https://bitesofcode.wordpress.com/2017/01/19/converting-images-to-ascii-art-part-1/) blog post on converting pixel values of an image to ascii characters. I built a similar processor using my own technique in Python. I also went one step further and created a method to convert specifc text, in my case a speech transcript, to create map pixel intensities to specific text. The results are quite cool! 
 
-<img src="ascii_mosaic/obama/obama_ascii_2.png" width="600" alt="raw" />
+<img src="/ascii_mosaic/obama/obama_ascii_2.gif" width="600" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
