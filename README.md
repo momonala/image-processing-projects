@@ -41,7 +41,6 @@ Because math is beautiful.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ## [Image Layering with Open Source NASA Map Images](/earth_layers)
 
 The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data from NASA's image repo, [Visible Earth](https://www.visibleearth.nasa.gov/). You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how population and light interact.
@@ -49,6 +48,7 @@ The code works as a series of transformations and image overlays on Equirectangu
 <p align="center">
     <img src="/earth_layers/earth_layers2.jpg" width="800" alt="Combined Image" />
 </p>
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## [Keras Prototype](/keras_prototype)
