@@ -27,7 +27,7 @@ This code is inspired from the [BitsOfCode](https://bitesofcode.wordpress.com/20
 This notebook shows the use of Singular Value Decomposition for the purpose of background removal from a survelliance video stream. The project idea originally comes from Rachel Thomas' FastAI course for 
 [Computational Linear Algebra - Chapter 3](https://github.com/fastai/numerical-linear-algebra). The dataset comes from the [BMC 2012 Background Models Challenge Dataset](http://bmc.iut-auvergne.com/?page_id=24)
 
-<img src="/background_removal/output.png" width="1000" alt="raw" />
+<img src="/background_removal/output.png" width="900" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -35,8 +35,8 @@ This notebook shows the use of Singular Value Decomposition for the purpose of b
 
 This software uses real-time computer vision to measure heart-rate from changes in optical intensity measured via a webcam. This is a sort of ensemble implementation, drawing from software written by others in academia and as a hobby. Specifically, I draw heaviest from the techniques of Ming-Zher Poh et. al., while making the processing lighter weight and more readable. The technique uses feature extraction, Independent Component Analysis (ICA) and a fast fourrier transform to detect heart rate. 
 
-<img src="/optical_heart_rate/img/disp.png" width="1000" alt="raw" />
-<img src="/optical_heart_rate/img/ICA.png" width="1000" alt="raw" />
+<img src="/optical_heart_rate/img/disp.png" width="900" alt="raw" />
+<img src="/optical_heart_rate/img/ICA.png" width="900" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -60,6 +60,17 @@ The code works as a series of transformations and image overlays on Equirectangu
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+## [Seam Carving](https://github.com/momonala/imaging_and_vision/tree/master/seam_carving)
+
+An experiment with a technique that looks like magic. Content-Aware Image Resizing - a technique invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
+
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=gIVqbKQdSGs " target="_blank"><img src="/seam_carving/img.png"  alt="_" width="700" border="10" /></a>
+</p>
+I used python's openCV and scikit image to build a few seam carving algroithms. The first, seam_carving_slider.py, is a tool that allows the user to upload an image and use a trackbar to compress the image as desired. My second algorthim, seam_carving_iter.py is a loop implementation that allows the user to input a percent of the original image to compress into, and save consecutive images as one seam is removed per iteration. My algorithm takes in inputs for direction,  compression ratio and number of seams per iteration. Hardcoded is the energy mapping function, which does Gaussian smoothing and measures the Sobel gradient magnitude in openCV, much faster than scikit. In the loop I recursively carve (scikit) and recompute the energy map which makes the seam cutting more seamless. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [Keras Prototype](/keras_prototype)
 
 Built a keras prototype for Keras to copy, paste, and modify for other purposes. Includes CNN architecture, lambda layer preprocessing, optimizers, metrics, losses, visualizations, and tensorboard, mostly so I can copy and paste for later projects :)  
@@ -69,14 +80,3 @@ Built a keras prototype for Keras to copy, paste, and modify for other purposes.
 ## [Image Generator for Machine Learning](/generator)
 
 This is an image generator I built from scratch for an interview with [BrighterAI](), an deep learning company that uses image augmentation for security and self-driving-cars. The generator has a basic version plus a version for GPU support and image augmentation. 
-
------------------------------------------------------------------------------------------------------------------------------------------------
-
-## [Seam Carving](https://github.com/momonala/imaging_and_vision/tree/master/seam_carving)
-
-An experiment with a technique that looks like magic. Content-Aware Image Resizing - a technique invented by Avidan and Shamir from Mitsubishi Electric Research Labs in 2007. 
-
-<p align="center">
-    <a href="https://www.youtube.com/watch?v=gIVqbKQdSGs " target="_blank"><img src="/seam_carving/img.png"  alt="_" width="700" border="10" /></a>
-</p>
-I used python's openCV and scikit image to build a few seam carving algroithms. The first, seam_carving_slider.py, is a tool that allows the user to upload an image and use a trackbar to compress the image as desired. My second algorthim, seam_carving_iter.py is a loop implementation that allows the user to input a percent of the original image to compress into, and save consecutive images as one seam is removed per iteration. My algorithm takes in inputs for direction,  compression ratio and number of seams per iteration. Hardcoded is the energy mapping function, which does Gaussian smoothing and measures the Sobel gradient magnitude in openCV, much faster than scikit. In the loop I recursively carve (scikit) and recompute the energy map which makes the seam cutting more seamless. 
