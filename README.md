@@ -37,6 +37,7 @@ This software uses real-time computer vision to measure heart-rate from changes 
 
 <img src="/optical_heart_rate/img/disp.png" width="1000" alt="raw" />
 <img src="/optical_heart_rate/img/ICA.png" width="1000" alt="raw" />
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## [Math Gifs](/math_gifs)
