@@ -31,6 +31,14 @@ This notebook shows the use of Singular Value Decomposition for the purpose of b
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+## [Optical Heart Rate Recognition via Webcam](/optical_heart_rate)
+
+This software uses real-time computer vision to measure heart-rate from changes in optical intensity measured via a webcam. This is a sort of ensemble implementation, drawing from software written by others in academia and as a hobby. Specifically, I draw heaviest from the techniques of Ming-Zher Poh et. al., while making the processing lighter weight and more readable. The technique uses feature extraction, Independent Component Analysis (ICA) and a fast fourrier transform to detect heart rate. 
+
+<img src="/optical_heart_rate/img/disp.png" width="1000" alt="raw" />
+<img src="/optical_heart_rate/img/ICA.png" width="1000" alt="raw" />
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [Math Gifs](/math_gifs)
 
 Because math is beautiful. 
