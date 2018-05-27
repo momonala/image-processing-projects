@@ -71,9 +71,9 @@ I used python's openCV and scikit image to build a few seam carving algroithms. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Keras Prototype](/keras_prototype)
+## [Cython Ising Model](/cython_ising)
 
-Built a keras prototype for Keras to copy, paste, and modify for other purposes. Includes CNN architecture, lambda layer preprocessing, optimizers, metrics, losses, visualizations, and tensorboard, mostly so I can copy and paste for later projects :)  
+Following along a tutorial, posting for Cython referecne in the future.   
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
