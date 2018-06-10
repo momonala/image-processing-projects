@@ -4,11 +4,36 @@ A place for my smaller projects & experiments in image processing, computer visi
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+## [Anomoly Detection for Watch Faces](/watch_faces)
+
+This project was a proof of concept for a small watch company with the goal of using computer vision to detect errors in the manufacturing process of watches. An image is taken of a watch face and analyzed for errors in its design. These errors can include things like misplaced numbers, unwanted color variations, misalignment of features on the watch etc. My algorithm works by comparing a positive example of a watch pre-determined to be manufactured correctly with the new query watch. The images are aligned with OpenCV's SIFT Detector. Matches are filtered using a custom statistcal model based of a Gaussian Kernel Density Estimation of the SIFT transformation features. A Homography Transform is aligned so all of the watch features should line up, if both watches are identical. If the query watch has errors, they will become immediately visible by comparison. 
+
+Once the two images are aligned, they are normalized and blurred (Gaussian) and subtracted from eachother to visualize the differences. These differences are highlighted for easy localization and detection. Future work of this project includes automation of a pipeline to capture the images and sort the watches. 
+
+In the examples below, the top image shows a watch face with errors, denoted by the highlighted "III" which is missing. The second exmaple is a perfect watch and does not show this error.
+
+#### Watch Face With Errors 
+<img src="/watch_faces/img/error.png" width="700" alt="raw" />
+
+#### Watch Face Without Errors
+<img src="/watch_faces/img/no_error.png" width="700" alt="raw" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [Cell Counting with Hough Circles](/cell_counting)
 
-I built a pretty in depth pipeline to detect cells on a 96 well-plate agar dish. This was for a project at work which involved a larger pipeline of cell counting and colony picking with a robot. My algorithm vastly improved the existing default technique. I included parameters to filter the desired radius size of the cell, the separation of cells within each plate (close-by cells can otherwise be incorrecly grouped as the same colony, even though they have genetic differences. This avoids that), and had an overall higher accuracy at finding cells. It was based on using Hough Circles as the shape finding algorithm, with a whole lot of numpy to itemize the well plates and cell ranking. 
+For my work with the Synethetic Biology Company, Amyris, I built an in-depth pipeline to detect cells on a 96 well-plate agar dish. This was for a project which involved a larger pipeline of cell counting and colony picking with a robot. I included parameters to filter the desired radius size of the cell, the separation of cells within each plate (close-by cells can otherwise be incorrecly grouped as the same colony, even though they have genetic differences. This avoids that). My algorithm was 4 times faster and improved average cell localization accuracy to 93% (previously 79%). It was based on using OpenCV Hough Circles as the shape finding algorithm, with a whole lot of numpy to itemize the well plates and cell ranking. 
 
 <img src="/cell_counting/img/disp.png" width="1000" alt="raw" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## [Optical Heart Rate Recognition via Webcam](/optical_heart_rate)
+
+This software uses real-time computer vision to measure heart-rate from changes in optical intensity measured via a webcam. This is a sort of ensemble implementation, drawing from software written by others in academia and as a hobby. Specifically, I draw heaviest from the techniques of Ming-Zher Poh et. al., while making the processing lighter weight and more readable. The technique uses feature extraction, Independent Component Analysis (ICA) and a fast fourrier transform to detect heart rate. 
+
+<img src="/optical_heart_rate/img/disp.png" width="900" alt="raw" />
+<img src="/optical_heart_rate/img/ICA.png" width="900" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -31,31 +56,12 @@ This notebook shows the use of Singular Value Decomposition for the purpose of b
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-## [Optical Heart Rate Recognition via Webcam](/optical_heart_rate)
-
-This software uses real-time computer vision to measure heart-rate from changes in optical intensity measured via a webcam. This is a sort of ensemble implementation, drawing from software written by others in academia and as a hobby. Specifically, I draw heaviest from the techniques of Ming-Zher Poh et. al., while making the processing lighter weight and more readable. The technique uses feature extraction, Independent Component Analysis (ICA) and a fast fourrier transform to detect heart rate. 
-
-<img src="/optical_heart_rate/img/disp.png" width="900" alt="raw" />
-<img src="/optical_heart_rate/img/ICA.png" width="900" alt="raw" />
-
------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## [Math Gifs](/math_gifs)
 
 Because math is beautiful. 
 
 <p align="center">
    <img src="/math_gifs/toroid_revolver/toroid_compressed.gif" width="400" alt="raw" />
-</p>
-
------------------------------------------------------------------------------------------------------------------------------------------------
-
-## [Image Layering with Open Source NASA Map Images](/earth_layers)
-
-The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data from NASA's image repo, [Visible Earth](https://www.visibleearth.nasa.gov/). You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how population and light interact.
-
-<p align="center">
-    <img src="/earth_layers/earth_layers2.jpg" width="800" alt="Combined Image" />
 </p>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -71,12 +77,22 @@ I used python's openCV and scikit image to build a few seam carving algroithms. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+## [Image Layering with Open Source NASA Map Images](/earth_layers)
+
+The code works as a series of transformations and image overlays on Equirectangular maps. I used population data and Earth at Night (lights) data from NASA's image repo, [Visible Earth](https://www.visibleearth.nasa.gov/). You can adjust the parameters of one image to highlight certain aspects of the image data, and overlap images to see how population and light interact.
+
+<p align="center">
+    <img src="/earth_layers/earth_layers2.jpg" width="800" alt="Combined Image" />
+</p>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [Cython Ising Model](/cython_ising)
 
-Following along a tutorial, posting for Cython referecne in the future.   
+Following along a tutorial, posting for Cython reference in the future.   
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## [Image Generator for Machine Learning](/generator)
 
-This is an image generator I built from scratch for an interview with [BrighterAI](), an deep learning company that uses image augmentation for security and self-driving-cars. The generator has a basic version plus a version for GPU support and image augmentation. 
+This is an image generator I built from scratch for an interview with [BrighterAI](https://www.brighter.ai/#!), an deep learning company that uses image augmentation for security and self-driving-cars. The generator has a basic version plus a version for GPU support and image augmentation. 
