@@ -1,4 +1,4 @@
-# Making images! 
+# Image Processing and Computer Vision 
 
 A place for my smaller projects & experiments in image processing, computer vision, and computational photography.  
 
