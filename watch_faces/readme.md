@@ -3,7 +3,7 @@
 This project was a proof of concept for a small watch company with the goal of using computer vision to detect errors in the manufacturing process of watches. An image is taken of a watch face and analyzed for errors in its design. These errors can include things like misplaced numbers, unwanted color variations, misalignment of features on the watch etc. 
 
 #### Watch Face With Errors 
-<img src="/watch_faces/img/error.png" width="700" alt="raw" />
+<img src="/img/error.jpg" width="700" alt="raw" />
 
 ## Code 
 
@@ -25,8 +25,8 @@ Once the two images are aligned, they are normalized and blurred (Gaussian) and 
 In the examples below, the top image shows a watch face with errors, denoted by the highlighted "III" which is missing. The second exmaple is a perfect watch and does not show this error.
 
 #### Watch Face With Errors 
-<img src="/watch_faces/img/error.png" width="700" alt="raw" />
+<img src="/img/error.jpg" width="700" alt="raw" />
 
 #### Watch Face Without Errors
-<img src="/watch_faces/img/no_error.png" width="700" alt="raw" />
+<img src="/img/no_error.jpg" width="700" alt="raw" />
 

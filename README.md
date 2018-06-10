@@ -13,10 +13,10 @@ Once the two images are aligned, they are normalized and blurred (Gaussian) and 
 In the examples below, the top image shows a watch face with errors, denoted by the highlighted "III" which is missing. The second exmaple is a perfect watch and does not show this error.
 
 #### Watch Face With Errors 
-<img src="/watch_faces/img/error.png" width="700" alt="raw" />
+<img src="/watch_faces/img/error.jpg" width="700" alt="raw" />
 
 #### Watch Face Without Errors
-<img src="/watch_faces/img/no_error.png" width="700" alt="raw" />
+<img src="/watch_faces/img/no_error.jpg" width="700" alt="raw" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
