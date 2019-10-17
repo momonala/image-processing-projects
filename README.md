@@ -90,9 +90,3 @@ The code works as a series of transformations and image overlays on Equirectangu
 ## [Cython Ising Model](/cython_ising)
 
 Following along a tutorial, posting for Cython reference in the future.   
-
------------------------------------------------------------------------------------------------------------------------------------------------
-
-## [Image Generator for Machine Learning](/generator)
-
-This is an image generator I built from scratch for an interview with [BrighterAI](https://www.brighter.ai/#!), an deep learning company that uses image augmentation for security and self-driving-cars. The generator has a basic version plus a version for GPU support and image augmentation. 
